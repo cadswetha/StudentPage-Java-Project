@@ -27,16 +27,16 @@ public class AfterLogin extends JFrame implements ActionListener{
 	
 	String degree[]={"B.Tech","B.E" , "Law" , "B.Com" };
 	String dat[]={"1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31"};
-    String month[]={"Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"};
-    String year[]={"1995","1996","1997","1998","1999","2000","2001","2002","2003","2004","2005"};
+        String month[]={"Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"};
+        String year[]={"1995","1996","1997","1998","1999","2000","2001","2002","2003","2004","2005"};
 	
 	AfterLogin(String regno){
-	   setTitle("StudentInfo");
-	   setSize(700,600);
+	    setTitle("StudentInfo");
+	    setSize(700,600);
 	    setLayout(null);
-       setVisible(true);
-	   setResizable(false);
-	   setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
+            setVisible(true);
+	    setResizable(false);
+	    setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
 	   
 		//imageicon
 		ic2 = new ImageIcon("SASTRALOGO.png");
@@ -91,35 +91,35 @@ public class AfterLogin extends JFrame implements ActionListener{
 		//radiobuttons
 		jrb1=new JRadioButton("M");
 		jrb1.setBounds(170,270,60,30);
-        jrb2=new JRadioButton("F");
+                jrb2=new JRadioButton("F");
 		jrb2.setBounds(230,270,60,30);
 		jrb3 = new JRadioButton("Other");
 		jrb3.setBounds(290,270,60,30);
-        bg1=new ButtonGroup();
-        bg1.add(jrb1);
-        bg1.add(jrb2);
+                bg1=new ButtonGroup();
+                bg1.add(jrb1);
+                bg1.add(jrb2);
 		bg1.add(jrb3);
-        add(jrb1);
-        add(jrb2);
+                add(jrb1);
+                add(jrb2);
 		add(jrb3);
 		
 		//combobox
 		jcmb1=new JComboBox<String>(degree);
-        jcmb1.setBounds(170,420,80,30);
-        add(jcmb1);
-        jcmb4=new JComboBox<String>(dat);
-        jcmb4.setBounds(170 , 220 ,60,30);
-        add(jcmb4);
-        jcmb5=new JComboBox<String>(month);
-        jcmb5.setBounds(230 , 220 ,60,30);
-        add(jcmb5);
-        jcmb6=new JComboBox<String>(year);
-        jcmb6.setBounds(290 , 220 ,60,30);
-        add(jcmb6);
+                jcmb1.setBounds(170,420,80,30);
+       		add(jcmb1);
+        	jcmb4=new JComboBox<String>(dat);
+        	jcmb4.setBounds(170 , 220 ,60,30);
+        	add(jcmb4);
+        	jcmb5=new JComboBox<String>(month);
+        	jcmb5.setBounds(230 , 220 ,60,30);
+        	add(jcmb5);
+        	jcmb6=new JComboBox<String>(year);
+        	jcmb6.setBounds(290 , 220 ,60,30);
+        	add(jcmb6);
 		
 		//imageicon
-	    ic1 = new ImageIcon("login.jpg");
-	    lbc = new JLabel(ic1);
+	    	ic1 = new ImageIcon("login.jpg");
+	    	lbc = new JLabel(ic1);
 		lbc.setBounds(370,150,300,200);
 		add(lbc);
 		
@@ -145,7 +145,7 @@ public class AfterLogin extends JFrame implements ActionListener{
 	public void actionPerformed(ActionEvent ae){
 		if(ae.getSource() == AddRecord){
 			f=new JFrame();  
-            JOptionPane.showMessageDialog(f,"Details Successfully Added!"); 
+            		JOptionPane.showMessageDialog(f,"Details Successfully Added!"); 
 		}
 		else if(ae.getSource() == logout){
 			dispose();
@@ -156,11 +156,11 @@ public class AfterLogin extends JFrame implements ActionListener{
 			tcon.setText("");
 			tc.setText("");
 			f=new JFrame(); 
-            JOptionPane.showMessageDialog(f,"Data Cleared!"); 
+            		JOptionPane.showMessageDialog(f,"Data Cleared!"); 
 		}
 		else if(ae.getSource() == Update){
 			f=new JFrame();  
-            JOptionPane.showMessageDialog(f,"Details Updated!"); 
+            		JOptionPane.showMessageDialog(f,"Details Updated!"); 
 		}
 		
 	}
